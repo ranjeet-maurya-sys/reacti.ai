@@ -1,0 +1,41 @@
+header{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    .navbar{
+        padding: 0;
+        .navbar-brand{
+            transform: translateX(-8em);
+            @include X-desktop{
+                transform: translateX(0em);
+                
+            }
+            img{
+                max-width: 220px;
+                height: auto;
+            }
+        }
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    margin: 0 1em;
+                    color: $white;
+                    transition: linear .5s ;
+                    @include laptop{
+                        margin: 0 .5em;
+                    }
+                    &:hover{
+                        // font-weight: 500;
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}
+.navbar-toggler{
+    border: none;
+    &:focus{
+        box-shadow: none;
+    }
+}

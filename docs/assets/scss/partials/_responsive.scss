@@ -1,0 +1,22 @@
+@include laptop{
+    .entrovert_content{
+        padding-left: 0em !important;
+    }
+}
+@include tab{
+    div#navbarSupportedContent{
+        background-color: rgba($color: #3C89F6, $alpha: .95);
+        padding: 1em;
+        border-radius: $radius1;
+    }
+    header .navbar .navbar-nav .nav-item .nav-link {
+        border-bottom: 1px solid rgba($color: #fff, $alpha: .50);
+    }
+    .mobile_text{
+        display: none;
+    }
+    .comment_contents_text{
+        align-items: center !important;
+        text-align: center;
+    }
+}

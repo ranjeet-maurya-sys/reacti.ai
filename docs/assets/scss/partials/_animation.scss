@@ -1,0 +1,138 @@
+.circle_animation1,.circle_animation2{
+    position: absolute;
+    content: '';
+    height: 134px;
+    width:134px;
+    background:url('/assets/images/animation-circle/circle-2.png');
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: translateY(0em);
+    transition: 2s ease-in-out;
+    cursor: pointer;
+}
+.entrovert_img{
+    cursor: pointer;
+    &:hover{
+        .circle_animation1{
+                top: 200px;
+        }
+        .circle_animation2{
+                bottom: 200px;
+        }
+
+    }
+}
+.circle_animation1{
+    // animation: circle 3s linear infinite alternate;
+    top: 0;
+    right: 0;
+    &:hover{
+        top: 10%;
+    }
+}
+.circle_animation2{
+    bottom: 0;
+    left: 0;
+    background:url('/assets/images/animation-circle/circle-1.png');
+    // animation: circle2 2s linear infinite alternate;
+}
+// @keyframes circle2 {
+//     0%{
+//         transform: translateY(1em);
+//     }
+//     50%{
+//         transform: translateY(0em);
+        
+//     }
+//     100%{
+//         transform: translateY(-2em);
+//     }
+// }
+// @keyframes circle {
+//     0%{
+//         transform: translateY(-1em);
+//     }
+//     50%{
+//         transform: translateY(0em);
+        
+//     }
+//     100%{
+//         transform: translateY(2em);
+//     }
+// }
+
+#footer_banner{
+    &::before,&::after{
+        position: absolute;
+        content: '';
+        background-repeat: no-repeat;
+        z-index: 1;
+        transform: scale(.5);
+    }
+    
+&::before{
+    width:126px;
+    height: 126px;
+    top: 14%;
+    left: 25%;
+    background:url('/assets/images/animation-circle/circle-3.png');
+    animation: circle3 3s linear infinite alternate;
+    @include tab{
+        display: none;
+    }
+}
+&::after{
+    width:295px;
+    height: 295px;
+    right: -11%;
+    top: -10%;
+    background:url('/assets/images/animation-circle/circle-4.png');
+    animation: circle4 3s linear infinite alternate;
+    transform: scale(.5);
+    @include tab{
+        display: none;
+    }
+    }
+}
+@keyframes circle4 {
+    0%{
+        filter: brightness(100%);
+    }
+    50%{
+        filter: brightness(0);
+        
+    }
+    100%{
+        filter: brightness(100%);
+    }
+}
+
+@keyframes circle3 {
+    0%{
+        transform: scale(.2);
+    }
+    
+    50%{
+        transform: scale(.8);
+    }
+    100%{
+        transform: scale(.3);
+    }
+
+}
+
+.animate {
+    animation: my-animation 1s forwards;
+  }
+  
+  @keyframes my-animation {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

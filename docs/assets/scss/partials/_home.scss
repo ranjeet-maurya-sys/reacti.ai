@@ -1,0 +1,554 @@
+#entrovert_banner {
+    @include img_url;
+    background: url('/assets/images/header/header-banner.png');
+    background-size: 100% 100%;
+    padding: 8em 1em 13em;
+    background-attachment: fixed;
+    @include desktop{
+        background-attachment:scroll;
+    }
+    @include laptop{
+        padding: 7em 1em 10em;
+    }
+    .entrovert_content{
+        @include desktop{
+            padding-top: 2em;
+            padding-left: 3em;
+        }
+        @include laptop{
+            padding-left: 0;
+        }
+        .text {
+            color: $white;
+        }
+    }
+
+    .entrovert_img {
+        position: relative;
+        @include _flex;
+        @include laptop{
+            height: 100%;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+
+            @include desktop {
+                max-width: 520px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.reviews_banner {
+    @include img_url;
+    background: url('/assets/images/reacti/reviews-banner.png');
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include desktop{
+        background: transparent;
+        
+    }
+}
+
+// engage component //
+.engage_ai {
+    padding: 6em 0 0 0;
+    text-align: center;
+    @include desktop{
+        padding: 0 0 0;
+    }
+
+    .sub_title {
+        color: $gray;
+        padding: .5em 0 1.5em;
+    }
+
+    .text {
+        color: $white;
+        padding: .8em 1.3em;
+        display: inline-block;
+        border-radius: $radius1;
+        font-size: 20px;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+
+    }
+
+    .blue_bg {
+        background-color: $blue;
+        &:hover{
+            background-color: $cyan;
+            color: #fff;
+
+        }
+    }
+
+    .cyan_bg {
+        background-color: $cyan;
+        text-align: left;
+        &:hover{
+            background-color: $blue;
+            color: #fff;
+
+        }
+    }
+}
+
+.client_scale {
+    padding: 3em 0;
+    @include desktop{
+        padding: 2em 0;
+
+    }
+    .step_heading {
+        margin: 0 auto;
+        border-radius: 50px;
+        border: 1px solid #000000;
+        display: inline-block;
+        font-size: 20px;
+        padding: 1em 1.5em;
+        margin-bottom: 3em;
+        transition: .5s ease-in-out;
+
+        &:hover{
+            cursor: pointer;
+            border: 1px solid $orange;
+            color: $orange;
+
+        }
+        @include desktop{
+            margin-bottom: 2em;
+            font-size: 17px;
+
+        }
+    }
+
+    .step_box2 {
+        transform: translate(10px, -22px);
+        @include desktop{
+            transform: translate(30px, -21px);
+        }
+        @include laptop{
+            transform: translate(0);
+        }
+    }
+
+    .step_box3 {
+        transform: translate(0, -44px);
+        @include desktop{
+            transform: translate(0, -42px);
+
+        }
+        @include laptop{
+            transform: translate(0);
+
+        }
+    }
+    .step_img1{
+        margin-bottom: 1em;
+        display: none;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        @include laptop{
+            width: 100%;
+            height: 100%;
+            @include _flex;
+            // display: block;
+        }
+    }
+    .step_img2 {
+        @include _flex;
+        width: 100%;
+        height: 100%;
+        @include laptop{
+            display: none;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            @include desktop{
+                max-width: 80%;
+            }
+        }
+    }
+
+    .step_content {
+        @include _flex;
+        width: 100%;
+        height: 100%;
+        .text {
+            max-width: 314px;
+            padding: 1.5em;
+            border-radius: 28px;
+            display: inline-block;
+            background: #FFF5EE;
+            font-size: 17px;
+            color: #FFA046;
+            font-weight: 700;
+            transition: 1s linear;
+            transform: translateX(5em);
+            cursor: pointer;
+            &:hover{
+                transform: translateX(1em);
+
+            }
+            @include laptop{
+                max-width: 414px;
+                text-align: center;
+                transform: translateX(0);
+            }
+        }
+
+        .step_text_2 {
+            transform: translateX(-5em);
+            background-color: #F6F5FF;
+            color: #7468DD;
+            @include laptop{
+                transform: translateX(0em);
+
+            }
+        }
+        .step_text_3{
+            background-color: #FFEEEA;
+            color:#FD6746 ;
+        }
+        .step_text_4{
+            background-color: #F9FFED;
+            color:#84B328 ;
+        }
+        .step_text_5{
+            transform: translateX(-5em);
+            background-color: #F1F7FF;
+            color:#3E86F8 ;
+            @include laptop{
+                transform: translateX(0em);
+
+            }
+        }
+        .step_text_6{
+            background-color: #FFEFF1;
+            color:#EF4658 ;
+        }
+
+    }
+}
+
+// Make your comment strategy more efficient//
+.comment_startage {
+    width: 100%;
+    padding: 4em 0;
+    @include desktop{
+       padding: 1em 1em; 
+    }
+    .comment_contents {
+        width: 100%;
+        height: 100%;
+        @include _flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: flex-start;
+        .heading{
+            transition: 1s ease-in-out;
+            &:hover{
+                color: $yellow;
+            }
+        }
+        @include laptop{
+            .mobile_comment{
+                display: none;
+            }
+        }
+        @include tab{
+            .mobile_comment{
+                display: block;
+            }
+        }
+        .comment_img {
+        width: 100%;
+        height: 100%;
+            @include _flex;
+            padding: 1em;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                @include desktop{
+                    max-width: 70%;
+                }
+            }
+        }
+
+        .comment_key {
+            width: 100%;
+            height: 100%;
+            @include _flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 3em 0;
+            @include desktop{
+                padding: 0em 0;
+
+            }
+
+            .sub_text {
+                color: $gray;
+                cursor: pointer;
+            }
+            .sub_text1{
+                &:hover{
+                    color: #FFA046;
+                }
+            }
+            .sub_text2{
+                &:hover{
+                    color: #4334C1;
+                }
+            }
+            .sub_text3{
+                &:hover{
+                    color: #3C89F6;
+                }
+            }
+            
+        }
+
+    }
+
+}
+
+// AI that’s built and tailored for your //
+.workflow_linkedin {
+    padding: 2em 1em 4em;
+    @include desktop{
+        padding: 2em 0 2em;
+    }
+    @include tab{
+        padding: 1em 1em 2em;
+    }
+    .workflow_margin {
+        padding: 2em 0;
+        @include mobile{
+            padding: 1em 0 ;
+        }
+    }
+    .heading{
+        transition: .5s linear;
+        &:hover{
+            .orange_text{
+                color: $linkedin;
+            }
+        
+            .linkedin_text{
+                color: $orange;
+            }
+        }
+
+    }
+
+    .workflow_content {
+        background: rgba(241, 241, 241, 0.35);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        @include _flex;
+        width: 100%;
+        height: 100%;
+        &:hover{
+            background: rgba(241, 241, 241, 1);
+            .workflow_text{
+                cursor: pointer;
+                p{
+                    color: #333;
+                }
+            }
+        }
+        .workflow_img {
+            img {
+                max-width: 130PX;
+                height: auto;
+                @include X-desktop{
+                    max-width: 80px;
+
+                }
+            }
+        }
+
+        .workflow_text {
+            padding: 0 1em;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+// customer_reviews
+.customer_reviews {
+    padding: 10em 1em 6em;
+    
+    @include desktop{
+        padding: 4em 3em ;
+        background: #408EFF;
+        transition: .5s linear;
+        cursor: pointer;
+        &:hover{
+            background: $orange;
+            .reviews_content {
+                .heading{
+                    color: $black !important;
+                }
+                .text{
+                    color: #444 !important;
+                }
+            }
+        }
+        
+    }
+    @include mobile{
+        padding: 2em 3em ;
+        
+    }
+    @include small-mobile{
+        padding: 2em 2em ;
+        
+    }
+    @include tab{
+    text-align: center;        
+    }
+    .review_carousel {
+        padding: 0 3em;
+        .owl-carousel .owl-item {
+
+            img {
+                box-shadow: 0 0 10px rgba($color: #000000, $alpha: .10);
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.human_like{
+    padding: 8em 0 4em;
+    cursor: pointer;
+    transition: .4s ease-in;
+    &:hover{
+        background-color: #111;
+        .heading{
+            color: #fff;
+        }
+        .text{
+            color: #fff;
+        }
+    }
+    @include desktop{
+        padding: 4em 1em;
+    }
+    @include tab{
+        padding: 2em 2em;
+    }
+    .heading{
+        transition: .3s linear;
+        &:hover{
+            color: $orange;
+        }
+    }
+    .comments_tag{
+        padding: 0 3em;
+        @include desktop{
+            padding: 0;
+        }
+        li{
+            padding: 1em 0;
+            .text{
+                padding: 1em 1.5em;
+                display: inline-block;
+                color: $white;
+                border-radius: $radius1;
+                font-weight: 600;
+            }
+        }
+        .text_green{
+            transition: .5s ease-out;
+            cursor: pointer;
+            background: #9ECB45;
+            &:hover{
+                    background: #408EFF ;
+                    
+                }
+            }
+            .text_orange{
+                background: #FFA046;
+                &:hover{
+                    background: #FE6845;
+                    
+                }
+            }
+            .text_purple{
+                background: #7569DE;
+                &:hover{
+                    background: #9ECB45;
+
+                }
+            }
+            .text_red{
+                background: #FE6845 ;
+                &:hover{
+                    background: #FFA046;
+                    
+                }
+            }
+            .text_blue{
+                background: #408EFF;
+                &:hover{
+                    background: #7569DE;
+
+                }
+            }
+        
+    }
+}
+
+.still_figueing
+{
+    padding: 2em 2em;
+    @include desktop{
+        padding: 0em 1em 2em;
+
+    }
+    .number_text{
+        font-size: 50px;
+        @include desktop{
+            font-size: 1.5em;
+        }
+    }
+    .still_row{
+        margin-top: 3em;
+        @include desktop{
+            margin-top: 1.5em;
+
+        }
+        @include small-mobile{
+            margin-top: 1em;
+
+        }
+    }
+    .figuring_content{
+        .text{
+            color: $black;
+            padding-right: 1em;
+        }
+        .sub_text{
+            padding-right: 5em !important;
+            color: $gray;
+            padding: 1em 0;
+        }
+    }
+}
